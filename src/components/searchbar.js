@@ -11,9 +11,9 @@ const SearchBar = ({onFormSubmit}) => {
         onFormSubmit(term);
     };
 
-    const onInputChange = (event) => {
-        setTerm(event.target.value);
-    };
+    // const onInputChange = (event) => {
+    //     setTerm(event.target.value);
+    // };
 
     return(
         <div className="ui segment">
@@ -34,33 +34,31 @@ const SearchBar = ({onFormSubmit}) => {
 
 
 
-//Class-based component
-class _SearchBar extends React.Component{
+// //Class-based component
+// class _SearchBar extends React.Component{
 
-    state = { 'term': ''};
+//     state = { 'term': ''};
 
-    onFormSubmit = (event) => {
-        event.preventDefault();
-        this.props.onFormSubmit(this.state.term);
-    }
+//     onFormSubmit = (event) => {
+//         event.preventDefault();
+//         this.props.onFormSubmit(this.state.term);
+//     }
 
-    render(){
-        return(
-            <div className="ui segment">
-                <form className="ui form" onSubmit={this.onFormSubmit}>
-                    <div className="field">
-                        <label>Video Search</label>
-                        <input 
-                            type="text"
-                            value={this.state.term} 
-                            onChange ={ e => this.setState({term: e.target.value})} />
-                    </div>
-                </form>
-            </div>
-        );
-    }
-
-
-}
+//     render(){
+//         return(
+//             <div className="ui segment">
+//                 <form className="ui form" onSubmit={this.onFormSubmit}>
+//                     <div className="field">
+//                         <label>Video Search</label>
+//                         <input 
+//                             type="text"
+//                             value={this.state.term} 
+//                             onChange ={ e => this.setState({term: e.target.value})} />
+//                     </div>
+//                 </form>
+//             </div>
+//         );
+//     }
+// }
 
 export default SearchBar;
