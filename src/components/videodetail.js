@@ -1,4 +1,5 @@
-import Rect from 'react';
+import React from 'react';
+import { htmlDecode } from '../functions/utils';
 
 const VideoDetail  = ({video}) => {
 
@@ -11,11 +12,11 @@ const VideoDetail  = ({video}) => {
     return(
         <div>
             <div className="ui embed">
-                <iframe src={videoSrc} title=""VideoPlayer/>
+                <iframe src={videoSrc} title="VideoPlayer"/>
             </div>
 
             <div className="ui segment">
-                <h4 className="ui header">{video.snippet.title}</h4>
+                <h4 className="ui header">{htmlDecode(video.snippet.title)}</h4>
                 <p>{video.snippet.description}</p>
             </div>
         </div>
