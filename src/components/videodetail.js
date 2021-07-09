@@ -1,4 +1,4 @@
-import Rect from 'react';
+import React from 'react';
 
 const VideoDetail  = ({video}) => {
 
@@ -11,7 +11,7 @@ const VideoDetail  = ({video}) => {
     return(
         <div>
             <div className="ui embed">
-                <iframe src={videoSrc} title=""VideoPlayer/>
+                <iframe src={videoSrc} title="VideoPlayer"/>
             </div>
 
             <div className="ui segment">
