@@ -19,7 +19,7 @@ const SearchBar = ({onFormSubmit}) => {
         <div className="ui segment">
             <form className="ui form" onSubmit={onSubmit}>
                 <div className="field">
-                    <label>Search for Videos(Test auto deploy on push)</label>
+                    <label>Search for Videos</label>
                     <input 
                         type="text"
                         value={term} 
